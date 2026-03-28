@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bem-vindo — Mercado</title>
+  <link rel="stylesheet" href="../assets/cliente.css" />
+</head>
+<body class="c-body">
+  <p class="c-hint">Prévia de como fica no celular no mercado ou no condomínio.</p>
+  <div class="c-stage">
+    <div class="c-phone" aria-label="Simulação de tela de celular">
+      <div class="c-phone-notch" aria-hidden="true"></div>
+      <div class="c-phone-inner">
+        <header class="c-top">
+          <div class="c-top-title">
+            <h1>Mercado Solitário</h1>
+            <p>Condomínio Pituaçu</p>
+          </div>
+        </header>
+
+        <main class="c-main">
+          <div class="c-card c-card--accent">
+            <h2 class="c-h2">Olá! Bora comprar?</h2>
+            <p class="c-lead">Confirme que é você para abrir a loja no seu celular. É rápido.</p>
+            <label class="c-label" for="cod">Código da loja</label>
+            <input class="c-input" id="cod" type="text" value="SOL-1842" readonly />
+            <label class="c-label" for="cpf" style="margin-top:0.75rem">CPF ou cadastro</label>
+            <input class="c-input" id="cpf" type="text" placeholder="000.000.000-00" />
+            <div class="c-row">
+              <a class="c-btn c-btn-primary c-btn-block" href="./catalogo.html">Entrar e ver produtos</a>
+            </div>
+          </div>
+
+          <div class="c-card">
+            <h2 class="c-h2" style="font-size:1rem">Como funciona</h2>
+            <div class="c-steps">
+              <div class="c-step"><div class="c-step-num">1</div><span>Entrar</span></div>
+              <div class="c-step"><div class="c-step-num">2</div><span>Escolher</span></div>
+              <div class="c-step"><div class="c-step-num">3</div><span>Pagar</span></div>
+              <div class="c-step"><div class="c-step-num">4</div><span>Levar</span></div>
+            </div>
+          </div>
+
+          <p style="text-align:center;margin:0;font-size:0.82rem;color:var(--c-muted)">
+            <a href="../index.html" style="color:var(--c-mint);font-weight:800">← Voltar </a>
+          </p>
+        </main>
+
+        <nav class="c-tabbar" aria-label="Menu inferior">
+          <a class="c-tab c-tab--on" href="./bem-vindo.html"><span>⌂</span>Início</a>
+          <a class="c-tab" href="./catalogo.html"><span>🛍️</span>Loja</a>
+          <a class="c-tab" href="./carrinho.html"><span>🧺</span>Carrinho</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

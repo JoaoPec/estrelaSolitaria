@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pagamento — Mercado</title>
+  <link rel="stylesheet" href="../assets/cliente.css" />
+</head>
+<body class="c-body">
+  <p class="c-hint">Prévia de como fica no celular no mercado ou no condomínio.</p>
+  <div class="c-stage">
+    <div class="c-phone">
+      <div class="c-phone-notch" aria-hidden="true"></div>
+      <div class="c-phone-inner">
+        <header class="c-top c-top--plain">
+          <a class="c-back" href="./carrinho.html" aria-label="Voltar">‹</a>
+          <div class="c-top-title">
+            <h1>Pagamento</h1>
+            <p>Total: <strong style="color:var(--c-coral)">R$ 11,48</strong></p>
+          </div>
+        </header>
+
+        <main class="c-main" style="padding-bottom:2rem">
+          <p class="c-lead" style="margin-top:0">Escolha como você quer pagar.</p>
+
+          <button type="button" class="c-pay c-pay--on">
+            <strong>PIX</strong>
+            <small>Aprova na hora — você vê um QR Code ou copia e cola.</small>
+          </button>
+          <button type="button" class="c-pay">
+            <strong>Cartão</strong>
+            <small>Crédito ou débito na maquininha ou no celular.</small>
+          </button>
+          <button type="button" class="c-pay">
+            <strong>Dinheiro</strong>
+            <small>Avise se precisa de troco (só exemplo neste protótipo).</small>
+          </button>
+
+          <div class="c-card">
+            <label class="c-label" for="doc">CPF na nota (opcional)</label>
+            <input class="c-input" id="doc" type="text" placeholder="Se quiser recibo com CPF" />
+            <label class="c-label" for="obs" style="margin-top:0.75rem">Observação (opcional)</label>
+            <input class="c-input" id="obs" type="text" placeholder="Ex.: deixar na portaria" />
+          </div>
+
+          <div class="c-row">
+            <a class="c-btn c-btn-primary c-btn-block" href="./pronto.html">Confirmar compra</a>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

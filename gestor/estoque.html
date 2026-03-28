@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Estoque — Área da loja</title>
+  <link rel="stylesheet" href="../assets/gestor.css" />
+</head>
+<body class="g-body">
+  <div class="g-shell">
+    <aside class="g-side">
+      <div class="g-side-brand">
+        <strong>Estrela Solitária</strong>
+        <span>Gestão da loja</span>
+      </div>
+      <nav class="g-nav" aria-label="Menu">
+        <a href="./painel.html">Visão geral</a>
+        <a class="is-on" href="./estoque.html">Estoque e validade</a>
+        <a href="./alertas.html">Alertas mínimos</a>
+        <a href="./nfe.html">Importar NF-e</a>
+        <a href="./mapeamento.html">Mapear produtos</a>
+        <a href="./produtos.html">Catálogo da loja</a>
+      </nav>
+      <div class="g-side-foot">Protótipo visual — sem dados reais.</div>
+    </aside>
+
+    <div class="g-main">
+      <header class="g-top">
+        <div>
+          <h1>Estoque e validade</h1>
+          <p>Encontre produtos, veja quantidade e data de validade.</p>
+        </div>
+        <a class="g-chip" href="./alertas.html" style="text-decoration:none;color:inherit">Configurar alertas</a>
+      </header>
+
+      <div class="g-content">
+        <div class="g-tools">
+          <input type="search" placeholder="Buscar por nome ou código de barras…" />
+          <select>
+            <option>Todos os produtos</option>
+            <option>Só os em risco</option>
+            <option>Sem estoque</option>
+            <option>Validade próxima</option>
+          </select>
+        </div>
+
+        <div class="g-table-wrap">
+          <table class="g-table">
+            <thead>
+              <tr>
+                <th>Produto</th>
+                <th>Categoria</th>
+                <th>Quantidade</th>
+                <th>Validade</th>
+                <th>Situação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Leite integral 1 L</strong><br /><small>Cód. 7890…</small></td>
+                <td>Mercearia</td>
+                <td>8</td>
+                <td>25/04/2026</td>
+                <td><span class="g-pill g-pill--warn">Atenção</span></td>
+              </tr>
+              <tr>
+                <td><strong>Arroz tipo 1 kg</strong><br /><small>Cód. 7890…</small></td>
+                <td>Mercearia</td>
+                <td>120</td>
+                <td>10/09/2027</td>
+                <td><span class="g-pill g-pill--ok">OK</span></td>
+              </tr>
+              <tr>
+                <td><strong>Detergente 500 ml</strong><br /><small>Cód. 7890…</small></td>
+                <td>Limpeza</td>
+                <td>0</td>
+                <td>01/12/2026</td>
+                <td><span class="g-pill g-pill--bad">Esgotado</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo — Área da loja</title>
+  <link rel="stylesheet" href="../assets/gestor.css" />
+</head>
+<body class="g-body">
+  <div class="g-shell">
+    <aside class="g-side">
+      <div class="g-side-brand">
+        <strong>Estrela Solitária</strong>
+        <span>Gestão da loja</span>
+      </div>
+      <nav class="g-nav" aria-label="Menu">
+        <a href="./painel.html">Visão geral</a>
+        <a href="./estoque.html">Estoque e validade</a>
+        <a href="./alertas.html">Alertas mínimos</a>
+        <a href="./nfe.html">Importar NF-e</a>
+        <a href="./mapeamento.html">Mapear produtos</a>
+        <a class="is-on" href="./produtos.html">Catálogo da loja</a>
+      </nav>
+      <div class="g-side-foot">Protótipo visual — sem dados reais.</div>
+    </aside>
+
+    <div class="g-main">
+      <header class="g-top">
+        <div>
+          <h1>Catálogo da loja</h1>
+          <p>Nome, preço, estoque e validade — cadastro central (exemplo).</p>
+        </div>
+        <button type="button" class="g-btn g-btn-primary" style="width:auto;box-shadow:none;padding:0.65rem 1rem">+ Novo produto</button>
+      </header>
+
+      <div class="g-content">
+        <div class="g-tools">
+          <input type="search" placeholder="Buscar produto…" />
+        </div>
+
+        <div class="g-table-wrap">
+          <table class="g-table">
+            <thead>
+              <tr>
+                <th>Produto</th>
+                <th>Código de barras</th>
+                <th>Preço</th>
+                <th>Estoque</th>
+                <th>Validade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Leite integral 1 L</strong></td>
+                <td>7890…000</td>
+                <td>R$ 4,99</td>
+                <td>8</td>
+                <td>25/04/2026</td>
+              </tr>
+              <tr>
+                <td><strong>Arroz tipo 1 kg</strong></td>
+                <td>7890…123</td>
+                <td>R$ 6,49</td>
+                <td>120</td>
+                <td>10/09/2027</td>
+              </tr>
+              <tr>
+                <td><strong>Detergente 500 ml</strong></td>
+                <td>7890…555</td>
+                <td>R$ 2,90</td>
+                <td>0</td>
+                <td>01/12/2026</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="g-callout" style="margin-top:1.25rem">
+          <span style="font-size:1.5rem" aria-hidden="true">📋</span>
+          <div>
+            <strong>Cadastro completo</strong>
+            <p>No sistema real entram também fornecedor, lote e outras informações fiscais.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

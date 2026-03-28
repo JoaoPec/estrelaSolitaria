@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NF-e — Área da loja</title>
+  <link rel="stylesheet" href="../assets/gestor.css" />
+</head>
+<body class="g-body">
+  <div class="g-shell">
+    <aside class="g-side">
+      <div class="g-side-brand">
+        <strong>Estrela Solitária</strong>
+        <span>Gestão da loja</span>
+      </div>
+      <nav class="g-nav" aria-label="Menu">
+        <a href="./painel.html">Visão geral</a>
+        <a href="./estoque.html">Estoque e validade</a>
+        <a href="./alertas.html">Alertas mínimos</a>
+        <a class="is-on" href="./nfe.html">Importar NF-e</a>
+        <a href="./mapeamento.html">Mapear produtos</a>
+        <a href="./produtos.html">Catálogo da loja</a>
+      </nav>
+      <div class="g-side-foot">Protótipo visual — sem dados reais.</div>
+    </aside>
+
+    <div class="g-main">
+      <header class="g-top">
+        <div>
+          <h1>Importar nota fiscal (NF-e)</h1>
+          <p>Envie o arquivo XML para atualizar o estoque automaticamente.</p>
+        </div>
+        <span class="g-chip">Administrador</span>
+      </header>
+
+      <div class="g-content">
+        <div class="g-card">
+          <div class="g-field">
+            <label for="xml">Arquivo XML da NF-e</label>
+            <input id="xml" type="file" />
+          </div>
+          <div class="g-field">
+            <label for="loja">Qual loja recebeu a mercadoria?</label>
+            <select id="loja">
+              <option>Condomínio Pituaçu — Loja 1</option>
+              <option>Condomínio Costa Azul — Loja 2</option>
+            </select>
+          </div>
+
+          <p style="margin:0 0 0.5rem;font-weight:800;color:var(--g-muted);font-size:0.85rem">Andamento (exemplo)</p>
+          <div class="g-progress" aria-hidden="true"><div></div></div>
+          <p style="margin:0;font-size:0.9rem;color:var(--g-muted)">Validando arquivo… 65%</p>
+
+          <div class="g-steps">
+            <div class="g-step g-step--done">✓ Arquivo escolhido</div>
+            <div class="g-step g-step--done">✓ Leitura da nota</div>
+            <div class="g-step g-step--on">… Atualizando estoque e conferindo itens</div>
+          </div>
+
+          <button type="button" class="g-btn g-btn-primary" style="margin-top:0.5rem">Importar agora</button>
+
+          <div class="g-callout">
+            <span style="font-size:1.5rem" aria-hidden="true">💡</span>
+            <div>
+              <strong>Se der erro</strong>
+              <p>A tela real mostraria o motivo (arquivo inválido, produto não encontrado, etc.).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

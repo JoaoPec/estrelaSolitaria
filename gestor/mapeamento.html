@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mapeamento — Área da loja</title>
+  <link rel="stylesheet" href="../assets/gestor.css" />
+</head>
+<body class="g-body">
+  <div class="g-shell">
+    <aside class="g-side">
+      <div class="g-side-brand">
+        <strong>Estrela Solitária</strong>
+        <span>Gestão da loja</span>
+      </div>
+      <nav class="g-nav" aria-label="Menu">
+        <a href="./painel.html">Visão geral</a>
+        <a href="./estoque.html">Estoque e validade</a>
+        <a href="./alertas.html">Alertas mínimos</a>
+        <a href="./nfe.html">Importar NF-e</a>
+        <a class="is-on" href="./mapeamento.html">Mapear produtos</a>
+        <a href="./produtos.html">Catálogo da loja</a>
+      </nav>
+      <div class="g-side-foot">Protótipo visual — sem dados reais.</div>
+    </aside>
+
+    <div class="g-main">
+      <header class="g-top">
+        <div>
+          <h1>Mapear produtos da nota</h1>
+          <p>Igualar o que veio do fornecedor com o que a loja já vende.</p>
+        </div>
+        <span class="g-chip">Administrador</span>
+      </header>
+
+      <div class="g-content">
+        <div class="g-tools">
+          <input type="search" placeholder="Buscar por código ou nome…" />
+          <select>
+            <option>Ordenar: maior confiança</option>
+            <option>Ordenar: precisa revisar</option>
+          </select>
+        </div>
+
+        <div class="g-table-wrap">
+          <table class="g-table">
+            <thead>
+              <tr>
+                <th>Código na nota</th>
+                <th>Fornecedor</th>
+                <th>Produto na loja</th>
+                <th>Confiança</th>
+                <th>Ação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>7890…000</strong><br /><small>Item 12 do XML</small></td>
+                <td>Fornecedor X</td>
+                <td>Leite integral 1 L</td>
+                <td><span class="g-pill g-pill--ok">92%</span></td>
+                <td><button type="button" class="g-mini-btn">Confirmar</button></td>
+              </tr>
+              <tr>
+                <td><strong>7890…123</strong><br /><small>Item 18 do XML</small></td>
+                <td>Fornecedor Y</td>
+                <td>Arroz tipo 1 kg</td>
+                <td><span class="g-pill g-pill--warn">66%</span></td>
+                <td><button type="button" class="g-mini-btn">Revisar</button></td>
+              </tr>
+              <tr>
+                <td><strong>7890…777</strong><br /><small>Item 21 do XML</small></td>
+                <td>Fornecedor Z</td>
+                <td><em>Novo na loja</em></td>
+                <td><span class="g-pill g-pill--bad">—</span></td>
+                <td><button type="button" class="g-mini-btn">Cadastrar</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top:1rem;display:flex;gap:0.75rem;flex-wrap:wrap">
+          <button type="button" class="g-btn g-btn-primary">Aplicar tudo que está certo</button>
+          <button type="button" class="g-mini-btn" style="padding:0.75rem 1rem">Baixar lista do que falta</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Painel — Estoque</title>
+  <link rel="stylesheet" href="../assets/gestor.css" />
+</head>
+<body class="g-body">
+  <div class="g-shell">
+    <aside class="g-side">
+      <div class="g-side-brand">
+        <strong>Estrela Solitária</strong>
+        <span>Gestão da loja</span>
+      </div>
+      <nav class="g-nav" aria-label="Menu">
+        <a class="is-on" href="./painel.html">Visão geral</a>
+        <a href="./estoque.html">Estoque e validade</a>
+        <a href="./alertas.html">Alertas mínimos</a>
+        <a href="./nfe.html">Importar NF-e</a>
+        <a href="./mapeamento.html">Mapear produtos</a>
+        <a href="./produtos.html">Catálogo da loja</a>
+      </nav>
+      <div class="g-side-foot">Protótipo visual — sem dados reais.</div>
+    </aside>
+
+    <div class="g-main">
+      <header class="g-top">
+        <div>
+          <h1>Visão geral do estoque</h1>
+          <p>Resumo do que precisa da sua atenção hoje.</p>
+        </div>
+        <span class="g-chip g-chip--ok">Loja aberta</span>
+      </header>
+
+      <div class="g-content">
+        <div class="g-kpis">
+          <div class="g-kpi g-kpi--coral">
+            <span>Itens em risco</span>
+            <strong>7</strong>
+            <small>Abaixo do mínimo que você definiu</small>
+          </div>
+          <div class="g-kpi g-kpi--sun">
+            <span>Validade chegando</span>
+            <strong>12</strong>
+            <small>Vence nos próximos 30 dias</small>
+          </div>
+          <div class="g-kpi g-kpi--mint">
+            <span>Última NF-e</span>
+            <strong>Hoje</strong>
+            <small>Estoque atualizado (exemplo)</small>
+          </div>
+        </div>
+
+        <div class="g-grid-2">
+          <div class="g-card">
+            <h2>Alertas recentes</h2>
+            <div class="g-list-item">
+              <span class="g-dot g-dot--warn" aria-hidden="true"></span>
+              <div>
+                <strong>Leite integral 1 L</strong>
+                <small>Só restam 8 unidades (mínimo: 10)</small>
+              </div>
+              <button type="button" class="g-mini-btn">Ver</button>
+            </div>
+            <div class="g-list-item">
+              <span class="g-dot" aria-hidden="true"></span>
+              <div>
+                <strong>Arroz tipo 1 kg</strong>
+                <small>120 unidades — tudo certo</small>
+              </div>
+              <button type="button" class="g-mini-btn">Ver</button>
+            </div>
+          </div>
+
+          <div class="g-card">
+            <h2>Atalhos</h2>
+            <a class="g-action" href="./estoque.html" style="text-decoration:none;color:inherit;display:block">
+              <strong>Ver lista completa de produtos</strong>
+              <small>Estoque, validade e status de cada item</small>
+            </a>
+            <a class="g-action" href="./alertas.html" style="text-decoration:none;color:inherit;display:block">
+              <strong>Ajustar alertas de estoque baixo</strong>
+              <small>Por produto ou por categoria</small>
+            </a>
+            <a class="g-action" href="../index.html" style="text-decoration:none;color:inherit;display:block">
+              <strong>Voltar ao início do protótipo</strong>
+              <small>Trocar para a tela do cliente no celular</small>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

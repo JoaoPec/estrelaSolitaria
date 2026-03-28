@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alertas — Área da loja</title>
+  <link rel="stylesheet" href="../assets/gestor.css" />
+</head>
+<body class="g-body">
+  <div class="g-shell">
+    <aside class="g-side">
+      <div class="g-side-brand">
+        <strong>Estrela Solitária</strong>
+        <span>Gestão da loja</span>
+      </div>
+      <nav class="g-nav" aria-label="Menu">
+        <a href="./painel.html">Visão geral</a>
+        <a href="./estoque.html">Estoque e validade</a>
+        <a class="is-on" href="./alertas.html">Alertas mínimos</a>
+        <a href="./nfe.html">Importar NF-e</a>
+        <a href="./mapeamento.html">Mapear produtos</a>
+        <a href="./produtos.html">Catálogo da loja</a>
+      </nav>
+      <div class="g-side-foot">Protótipo visual — sem dados reais.</div>
+    </aside>
+
+    <div class="g-main">
+      <header class="g-top">
+        <div>
+          <h1>Alertas de estoque baixo</h1>
+          <p>Avise a equipe antes de faltar produto na prateleira.</p>
+        </div>
+        <span class="g-chip">Regras da loja</span>
+      </header>
+
+      <div class="g-content">
+        <div class="g-grid-2">
+          <div class="g-card">
+            <h2>Nova regra</h2>
+            <div class="g-field">
+              <label for="modo">Como quer definir?</label>
+              <select id="modo">
+                <option>Por produto</option>
+                <option>Por categoria</option>
+              </select>
+            </div>
+            <div class="g-field">
+              <label for="item">Produto ou categoria</label>
+              <select id="item">
+                <option>Leite integral 1 L</option>
+                <option>Arroz tipo 1 kg</option>
+                <option>Bebidas (tudo)</option>
+              </select>
+            </div>
+            <div class="g-field">
+              <label for="min">Quantidade mínima (avisar quando estiver embaixo disso)</label>
+              <input id="min" type="number" value="10" min="0" />
+            </div>
+            <button type="button" class="g-btn g-btn-primary" style="width:100%;margin-top:0.5rem">Salvar regra</button>
+          </div>
+
+          <div class="g-card">
+            <h2>Regras que já existem</h2>
+            <div class="g-list-item">
+              <div>
+                <strong>Leite integral 1 L</strong>
+                <small>Mínimo 10 unidades — aviso para o gestor</small>
+              </div>
+              <span class="g-pill g-pill--ok">Ativa</span>
+            </div>
+            <div class="g-list-item">
+              <div>
+                <strong>Arroz tipo 1 kg</strong>
+                <small>Mínimo 30 unidades — aviso para o gestor</small>
+              </div>
+              <span class="g-pill g-pill--ok">Ativa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
