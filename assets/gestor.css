@@ -79,11 +79,97 @@
   font-family: inherit;
 }
 
+.g-field textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  border: 2px solid var(--g-line);
+  font-size: 1rem;
+  font-family: inherit;
+  min-height: 88px;
+  resize: vertical;
+}
+
 .g-field input:focus,
-.g-field select:focus {
+.g-field select:focus,
+.g-field textarea:focus {
   outline: none;
   border-color: var(--g-sky);
   box-shadow: 0 0 0 3px rgba(51, 154, 240, 0.2);
+}
+
+.g-form {
+  max-width: 920px;
+}
+
+.g-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.25rem;
+}
+
+.g-field-span-2 {
+  grid-column: span 2;
+}
+
+@media (max-width: 700px) {
+  .g-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .g-field-span-2 {
+    grid-column: span 1;
+  }
+}
+
+.g-field-hint {
+  margin: 0 0 1rem;
+  font-size: 0.88rem;
+  color: var(--g-muted);
+  line-height: 1.45;
+}
+
+.g-barcode-card {
+  border-color: rgba(252, 196, 25, 0.55);
+  background: linear-gradient(180deg, #fffef8 0%, #fff 55%);
+  box-shadow: 0 8px 28px rgba(252, 196, 25, 0.12);
+}
+
+.g-barcode-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.g-barcode-card h2::before {
+  content: "▮";
+  color: var(--g-sun);
+  font-size: 1.1rem;
+}
+
+.g-barcode-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 2px dashed var(--g-line);
+}
+
+.g-mini-btn-accent {
+  border-color: rgba(51, 154, 240, 0.45);
+  background: linear-gradient(180deg, #e7f5ff 0%, #fff 100%);
+  color: var(--g-sky);
+}
+
+.g-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
 }
 
 .g-btn {

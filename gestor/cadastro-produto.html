@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro de produto — Área da loja</title>
+  <link rel="stylesheet" href="../assets/gestor.css" />
+</head>
+<body class="g-body">
+  <div class="g-shell">
+    <aside class="g-side">
+      <div class="g-side-brand">
+        <strong>Estrela Solitária</strong>
+        <span>Gestão da loja</span>
+      </div>
+      <nav class="g-nav" aria-label="Menu">
+        <a href="./painel.html">Visão geral</a>
+        <a href="./estoque.html">Estoque e validade</a>
+        <a href="./alertas.html">Alertas mínimos</a>
+        <a href="./nfe.html">Importar NF-e</a>
+        <a href="./mapeamento.html">Mapear produtos</a>
+        <a href="./produtos.html">Catálogo da loja</a>
+        <a class="is-on" href="./cadastro-produto.html">Cadastro de produto</a>
+      </nav>
+      <div class="g-side-foot">Protótipo visual — sem dados reais.</div>
+    </aside>
+
+    <div class="g-main">
+      <header class="g-top">
+        <div>
+          <h1>Cadastro de produto</h1>
+          <p>Preencha nome, código de barras, preço, categoria, estoque, validade e fornecedor.</p>
+        </div>
+        <a class="g-chip g-chip--ok" href="./produtos.html" style="text-decoration:none;color:inherit">← Voltar ao catálogo</a>
+      </header>
+
+      <div class="g-content">
+        <form class="g-form" action="./produtos.html" method="get">
+          <div class="g-card">
+            <h2>Dados principais</h2>
+            <div class="g-form-grid">
+              <div class="g-field g-field-span-2">
+                <label for="nome">Nome do produto</label>
+                <input id="nome" name="nome" type="text" placeholder="Ex.: Leite integral 1 L" autocomplete="off" />
+              </div>
+              <div class="g-field">
+                <label for="categoria">Categoria</label>
+                <select id="categoria" name="categoria">
+                  <option value="">Selecione…</option>
+                  <option>Mercearia</option>
+                  <option>Bebidas</option>
+                  <option>Limpeza e higiene</option>
+                  <option>Frios e laticínios</option>
+                  <option>Outros</option>
+                </select>
+              </div>
+              <div class="g-field">
+                <label for="preco">Preço de venda (R$)</label>
+                <input id="preco" name="preco" type="text" inputmode="decimal" placeholder="0,00" />
+              </div>
+              <div class="g-field">
+                <label for="qtd">Quantidade em estoque</label>
+                <input id="qtd" name="qtd" type="number" min="0" step="1" placeholder="0" />
+              </div>
+              <div class="g-field">
+                <label for="validade">Data de validade</label>
+                <input id="validade" name="validade" type="date" />
+              </div>
+              <div class="g-field g-field-span-2">
+                <label for="fornecedor">Fornecedor</label>
+                <input id="fornecedor" name="fornecedor" type="text" placeholder="Nome do fornecedor ou distribuidor" />
+              </div>
+            </div>
+          </div>
+
+          <div class="g-card g-barcode-card">
+            <h2>Código de barras</h2>
+            <p class="g-field-hint">Cadastre o código que identifica o produto na caixa registradora e na leitura na entrada de NF-e.</p>
+            <div class="g-form-grid">
+              <div class="g-field">
+                <label for="tipo-barras">Tipo de código</label>
+                <select id="tipo-barras" name="tipo_barras">
+                  <option value="ean13">EAN-13 (13 dígitos — mais comum)</option>
+                  <option value="ean8">EAN-8 (8 dígitos)</option>
+                  <option value="dun14">DUN-14 / caixa fechada</option>
+                  <option value="outro">Outro / interno da loja</option>
+                </select>
+              </div>
+              <div class="g-field">
+                <label for="codigo-barras">Código de barras</label>
+                <input id="codigo-barras" name="codigo_barras" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="14" placeholder="Somente números, sem espaços" autocomplete="off" />
+              </div>
+              <div class="g-field g-field-span-2">
+                <label for="codigo-barras-conf">Confirmar código de barras</label>
+                <input id="codigo-barras-conf" name="codigo_barras_conf" type="text" inputmode="numeric" maxlength="14" placeholder="Digite de novo para evitar erro" autocomplete="off" />
+              </div>
+            </div>
+            <div class="g-barcode-actions">
+              <button type="button" class="g-mini-btn g-mini-btn-accent">Simular leitura com leitor</button>
+              <span class="g-field-hint" style="margin:0;align-self:center">No caixa, use o leitor ou digite manualmente.</span>
+            </div>
+          </div>
+
+          <div class="g-form-actions">
+            <a class="g-btn g-btn-ghost" href="./produtos.html" style="margin-top:0;width:auto;padding:0.85rem 1.5rem">Cancelar</a>
+            <button type="submit" class="g-btn g-btn-primary" style="width:auto;min-width:200px">Salvar produto</button>
+          </div>
+        </form>
+
+        <div class="g-callout" style="margin-top:1.5rem">
+          <span style="font-size:1.5rem" aria-hidden="true">📌</span>
+          <div>
+            <strong>Lembrete</strong>
+            <p>Este é só um rascunho de tela: ao salvar, você volta para o catálogo. No sistema de verdade os dados seriam guardados no servidor.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
